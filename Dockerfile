@@ -1,6 +1,6 @@
 # Bind
 #
-# A simple name server.
+# general nameserver based on bind9/ubuntu
 
 FROM phusion/baseimage:latest
 MAINTAINER dieKeuleCT <koehlmeier@gmail.com>
@@ -22,8 +22,6 @@ RUN apt-get clean
 ADD run_bind9.sh /etc/service/named/run
 ADD run_webmin.sh /etc/service/webmin/run
 ADD update_pass.sh /etc/my_init.d/01_update_pass.sh
-#ADD named.tar.gz /root/named
-#ADD webmin.tar.gz /root/webmin
 
 EXPOSE 10000
 EXPOSE 53
